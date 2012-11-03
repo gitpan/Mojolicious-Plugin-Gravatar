@@ -5,7 +5,7 @@ use strict;
 use Mojo::Base 'Mojolicious::Plugin';
 use Mojo::ByteStream 'b';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub register {
     my ( $self, $app, $conf ) = @_;
@@ -43,7 +43,7 @@ sub register {
 
             my $size = $options{'size'} || $conf->{'size'};
 
-            my $url = $c->gravatar_url(@_);
+            my $url = b($c->gravatar_url(@_))->html_escape;
 
             return b "<img src='$url' alt='Gravatar' height='$size' width='$size' />";
         } );
@@ -142,11 +142,15 @@ $email (required) The key to using Gravatars is a hex hash of the user's email. 
     
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =head1 AUTHOR
+ 
+Viktor Turskyi <koorchik@cpan.org>
 
-"koorchik", C<< <"koorchik at cpan.org"> >>
+=head1 CONTRIBUTORS
+ 
+Nils Diewald (Akron)
 
 =head1 BUGS
 
@@ -154,8 +158,7 @@ Please report any bugs or feature requests to C<bug-mojolicious-plugin-gravatar 
 the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Mojolicious-Plugin-Gravatar>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
-
-
+Also you can report bugs to Github L<https://github.com/koorchik/Mojolicious-Plugin-Gravatar/>
 
 =head1 SUPPORT
 

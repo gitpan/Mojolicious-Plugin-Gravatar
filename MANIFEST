@@ -3,4 +3,6 @@ MANIFEST
 Makefile.PL
 README.pod
 lib/Mojolicious/Plugin/Gravatar.pm
-META.yml                                 Module meta-data (added by MakeMaker)
+t/gravatar.t
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

@@ -1,23 +1,23 @@
---- #YAML:1.0
-name:               Mojolicious-Plugin-Gravatar
-version:            0.01
-abstract:           Globally Recognized Avatars for Mojolicious
+---
+abstract: 'Globally Recognized Avatars for Mojolicious'
 author:
-    - "koorchik" <"koorchik@cpan.org">
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - "\"koorchik\" <\"koorchik@cpan.org\">"
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    Mojolicious:  0
-    Test::More:   0
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
+  ExtUtils::MakeMaker: 0
+configure_requires:
+  ExtUtils::MakeMaker: 0
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.120921'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Mojolicious-Plugin-Gravatar
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  Mojolicious: 0
+  Test::More: 0
+version: 0.02
